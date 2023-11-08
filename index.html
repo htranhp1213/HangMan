@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Guessing Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Hangman</h1>
+    <p>You have <span id="attemptsLeft">6</span> attempts left.
+        Hang in there or Hang the man
+    </p>
+    
+    <div id="wordDisplay"></div>
+    <input type="text" id="guessInput" maxlength="1" />
+    <button onclick="makeGuess()">Guess</button>
+    <p id="message"></p>
+    <script src="script.js"></script>
+</body>
+</html>
