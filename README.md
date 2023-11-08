@@ -1,4 +1,4 @@
-#**Hangman Game**
+# **Hangman Game**
 Welcome to our Hangma game project developed as a part of our university course. This project aims to create a simple word-guessing game using GO and JavaScript. 
 
 **Overview**
