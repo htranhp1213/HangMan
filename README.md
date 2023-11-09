@@ -6,7 +6,7 @@ The Hangman game is a classic word-guessing game that challenges players to gues
 
 ## Team Members
 - **Hrutvi Barad** (hbarad@uncc.edu)
-- **Huong Tran** (htran55@charlotte.edu)
+- **Houng Tran** (htran55@charlotte.edu)
 - **Nathan Johnson** (njohns89@charlotte.edu)
 - **Shreeya Karname** (skarnam1@uncc.edu)
 - **CJ Xiong** (cxjong27@uncc.edu)
