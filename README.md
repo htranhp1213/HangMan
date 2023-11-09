@@ -11,3 +11,25 @@ The Hangman game is a classic word-guessing game that challenges players to gues
 - **Shreeya Karname** (skarnam1@uncc.edu)
 - **CJ Xiong** (cxjong27@uncc.edu)
 
+## Features
+
+- Random word generation for players to guess.
+- Visual representation of the hangman's progress.
+- Display of guessed letters and the current state of the word.
+- Win and lose conditions.
+
+
+# How to play
+
+1. Open the game in your web browser following the setup instructions.
+
+2. You will see underscores representing the letters in the word to guess. For example: _ _ _ _ _.
+
+3. Start guessing letters by clicking on the on-screen keyboard or typing on your physical keyboard.
+
+4. Correct letters will be filled into the word, and incorrect guesses will advance the hangman's progress.
+
+5. You have a maximum of six incorrect guesses before losing the game.
+
+6. Keep guessing until you either successfully guess the word or lose the game.
+

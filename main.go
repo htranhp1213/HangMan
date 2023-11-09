@@ -44,10 +44,32 @@ func main() {
 			displayWord(wordToGuess, guesses)
 			pl("Congratulations! You've won!")
 			break
+		} else {
+				// Reset game variables for a new game
+				wordToGuess = getRandomWord()
+				guesses = make([]string, 0)
+				attempts = 0
+				pl("You have %d attempts to guess the word.\n", maxAttempts)
+			}
 		}
+
 
 		if maxAttempts == 0 {
 			pl("No more attempts ^w^ Hang the man!!!")
+
+			//Ask if the player wants to play again
+			pl("Do you want to play again? (yes/no)")
+			playAgain := getUserInput()
+			if playAgain != "yes" {
+				pl("Thanks for playing!")
+				break
+			} else {
+				// Reset game variables for a new game
+				wordToGuess = getRandomWord()
+				guesses = make([]string, 0)
+				attempts = 0
+				pl("You have %d attempts to guess the word.\n", maxAttempts)
+			}
 		}
 	}
 }
@@ -96,4 +118,22 @@ func contains(wordToGuess []string, item string) bool {
 	}
 	return false
 
+}
+// isLetter checks if the input is a single letter.
+func isLetter(input string) bool {
+	return len(input) == 1 && ('a' <= input[0] && input[0] <= 'z' || 'A' <= input[0] && input[0] <= 'Z')
+}
+
+// displayHangman displays a simple ASCII art representation of the hangman's progress.
+func displayHangman(attempts, maxAttempts int) {
+	switch attempts {
+	case 1:
+		fmt.Println("  ___ ")
+		fmt.Println(" |   |")
+		fmt.Println(" |   O")
+		fmt.Println(" |")
+		fmt.Println(" |")
+		fmt.Println("_|_")
+		
+	}
 }
