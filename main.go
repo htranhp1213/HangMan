@@ -44,15 +44,9 @@ func main() {
 			displayWord(wordToGuess, guesses)
 			pl("Congratulations! You've won!")
 			break
-		} else {
-			// Reset game variables for a new game
-			wordToGuess = getRandomWord()
-			guesses = make([]string, 0)
-			attempts = 0
-			pl("You have %d attempts to guess the word.\n", maxAttempts)
 		}
 
-		if maxAttempts == 0 {
+		if attempts == maxAttempts {
 			pl("No more attempts ^w^ Hang the man!!!")
 
 			//Ask if the player wants to play again
