@@ -21,6 +21,10 @@ h1 {
     background-color: #333;
     margin: 5px;
     transition: background-color 0.5s;
+} 
+
+#hangman-actions {
+    margin-top: 20px;
 }
 
 #pumpkin-head-button {
