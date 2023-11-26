@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    background-color: #4a90e2; /* Change background color to a blue shade */
+  }
+  
+  .container {
+    font-size: 20px; /* Increase font size for better readability */
+    background-color: #ffffff;
+    width: 70vw; /* Adjust container width */
+    max-width: 60em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 2em;
+    border-radius: 0.8em; /* Increase border radius for rounded corners */
+    box-shadow: 0 1.2em 2.4em rgba(0, 0, 0, 0.3); /* Adjust box shadow */
+  }
+  
+  #options-container {
+    text-align: center;
+    margin-top: 1.5em; /* Adjust top margin for better spacing */
+  }
+  
+  #options-container div {
+    width: 100%;
+    display: flex;
+    justify-content: space-around; /* Center options horizontally */
+    margin: 1.2em 0 2em 0;
+  }
+  
+  #options-container button {
+    padding: 0.8em 1.5em; /* Adjust padding for buttons */
+    border: 3px solid #ffffff; /* Change border color to white */
+    background-color:  rgb(120, 211, 255); /* Change button background color */
+    color: #ffffff;
+    border-radius: 0.5em;
+    text-transform: capitalize;
+    transition: all 0.2s ease-in-out
+  }
+  
+  #options-container button:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 5px 25px rgba(246, 229, 99, .67);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  #options-container button:disabled {
+    border: 3px solid #808080;
+    color: #808080;
+    background-color: #d3d3d3; /* Change disabled button background color */
+  }
+  
+  #options-container button.active {
+    background-color: #ffcc00; /* Change active button background color */
+    border: 3px solid #ffffff; /* Change border color to white */
+    color: #ffffff;
+  }
+  
+  .letter-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em; /* Adjust gap between letter buttons */
+  }
+  
+  #letter-container button {
+    height: 3em;
+    width: 3em;
+    border-radius: 0.5em;
+    background-color:  rgb(120, 211, 255);
+  }
+  
+  .new-game-popup {
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.8em;
+  }
+  
+  #user-input-section {
+    display: flex;
+    justify-content: center;
+    font-size: 2em; /* Increase font size for user input section */
+    margin: 1em 0 1.5em 0; /* Adjust margins */
+  }
+  
+  canvas {
+    display: block;
+    margin: auto;
+    border: 2px solid #ffffff; /* Change border color to white */
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  #result-text h2 {
+    font-size: 2em; /* Increase font size for result text */
+    text-align: center;
+  }
+  
+  #result-text p {
+    font-size: 1.5em; /* Increase font size for result text */
+    margin: 1em 0 2em 0;
+  }
+  
+  #result-text span {
+    font-weight: 600;
+  }
+  
+  #new-game-button {
+    font-size: 1.5em; /* Increase font size for new game button */
+    padding: 0.6em 1.2em; /* Adjust padding for new game button */
+    background-color: #ffcc00;
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    border-radius: 0.3em;
+  }
+  
+  .win-msg {
+    color: #39d78d;
+  }
+  
+  .lose-msg {
+    color: #fe5152;
+  }
+  
