@@ -55,8 +55,6 @@ func main() {
 
 	rand.Seed(time.Now().UnixNano())
 	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
-	http.HandleFunc("/", handler)
-	http.HandleFunc("/generate-word", generateWordHandler)
 
 	// Enable CORS
 	corsHandler := func(h http.Handler) http.Handler {
