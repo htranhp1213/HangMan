@@ -111,5 +111,9 @@ func generateWordHandler(w http.ResponseWriter, r *http.Request) {
 
 	// Send the chosen word back to the client
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(map[string]string{"chosenWord": chosenWord})
+	response := map[string]string{"chosenWord": chosenWord}
+	if err := json.NewEncoder(w).Encode(response); err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
 }

@@ -80,11 +80,23 @@ const generateWord = (optionValue) => {
   chosenWord = optionArray[Math.floor(Math.random() * optionArray.length)];
   chosenWord = chosenWord.toUpperCase();
 
-  //replace every letter with span containing dash
-  let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
-
-  //Display each element as span
-  userInputSection.innerHTML = displayItem;
+  fetch(`http://localhost:8080/generate-word?option=${optionValue}`)
+    .then(response => response.json())
+    .then(data => {
+      chosenWord = data.chosenWord;
+      // Now you can use chosenWord as needed
+      console.log('Chosen Word:', chosenWord);
+      console.log('Word Length:', chosenWord.length);
+      console.log('Individual Characters:', Array.from(chosenWord));
+      //replace every letter with span containing dash
+      let displayItem = '';
+      for (let i = 0; i < chosenWord.length; i++) {
+        displayItem += '<span class="dashes">_</span>';
+      }
+      //Display each element as span
+      userInputSection.innerHTML = displayItem;
+    })
+  .catch(error => console.error('Error fetching word:', error));
 };
 
 //Initial Function (Called when page loads/user presses new game)
