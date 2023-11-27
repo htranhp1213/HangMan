@@ -55,26 +55,36 @@ const blocker = () => {
 
   //disable all letters
   letterButtons.forEach((button) => {
-    button.disabled = true;
+    button.disabled.true;
   });
   newGameContainer.classList.remove("hide");
 };
 
 //Word Generator
 const generateWord = (optionValue) => {
-  // Make an AJAX request to the Go server
-  fetch(`http://localhost:8080/generate-word?option=${optionValue}`, {
-      method: 'GET',
-  })
-  .then(response => response.json())
-  .then(data => {
-      chosenWord = data.chosenWord.toUpperCase();
-      let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
-      userInputSection.innerHTML = displayItem;
-  })
-  .catch(error => {
-      console.error('Error:', error);
+  let optionsButtons = document.querySelectorAll(".options");
+  //If optionValur matches the button innerText then highlight the button
+  optionsButtons.forEach((button) => {
+    if (button.innerText.toLowerCase() === optionValue) {
+      button.classList.add("active");
+    }
+    button.disabled = true;
   });
+
+  //initially hide letters, clear previous word
+  letterContainer.classList.remove("hide");
+  userInputSection.innerText = "";
+
+  let optionArray = options[optionValue];
+  //choose random word
+  chosenWord = optionArray[Math.floor(Math.random() * optionArray.length)];
+  chosenWord = chosenWord.toUpperCase();
+
+  //replace every letter with span containing dash
+  let displayItem = chosenWord.replace(/./g, '<span class="dashes">_</span>');
+
+  //Display each element as span
+  userInputSection.innerHTML = displayItem;
 };
 
 //Initial Function (Called when page loads/user presses new game)
