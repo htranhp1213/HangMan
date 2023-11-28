@@ -6,7 +6,7 @@ The Hangman game is a classic word-guessing game that challenges players to gues
 
 ## Team Members
 - **Hrutvi Barad** (hbarad@uncc.edu)
-- **Houng Tran** (htran55@charlotte.edu)
+- **Huong Tran** (htran55@charlotte.edu)
 - **Nathan Johnson** (njohns89@charlotte.edu)
 - **Shreeya Karname** (skarnam1@uncc.edu)
 - **CJ Xiong** (cxjong27@uncc.edu)
@@ -33,3 +33,9 @@ The Hangman game is a classic word-guessing game that challenges players to gues
 
 6. Keep guessing until you either successfully guess the word or lose the game.
 
+# How to run the project
+1. Open the terminal of the project directory 
+2. Run command line: go run main.go
+3. Open your web browser and type or copy&paste http://localhost:8080/ and enter
+4. Play the game
+5. For inspection, right click and select Inspect. On the top right navigation bar, click Console for more details
